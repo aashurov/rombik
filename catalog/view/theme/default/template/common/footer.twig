@@ -1,0 +1,86 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      {% if informations %}
+      <div class="col-sm-3">
+        <h5>{{ text_information }}</h5>
+        <ul class="list-unstyled">
+         {% for information in informations %}
+          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      <div class="col-sm-3">
+        <h5>{{ text_service }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+		  <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+          <li><a href="{{ return }}">{{ text_return }}</a></li>
+          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>Контакты</h5>
+		<!--<h5>{{ text_extra }}</h5>-->
+        <ul class="list-unstyled">
+		<div class="contact-footer module clearfix">
+		
+		<div class="modcontent contact-footer">					
+		<ul>
+		<li><i class="fa fa-map-marker"></i>&nbsp; Адрес: Чиланзарский район, Улица Лутфи, 3-ий проезд, дом 17</li>
+		<li><i class="fa fa-mobile"></i>&nbsp; &nbsp;Телефон: +(998)(99)-002-29-92</li>
+		<li><i class="fa fa-envelope"></i>&nbsp;E-mail:&nbsp;<a href="info@rombik.uz">info@rombik.uz</a></li>
+		</ul>
+		</div>
+		<div class="imgpayment">
+		<img src="image/catalog/demo/payment/payment.png" alt="imgpayment">
+	</div>
+</div> 
+          <!--<li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+          <li><a href="{{ special }}">{{ text_special }}</a></li>-->
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>{{ text_account }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ account }}">{{ text_account }}</a></li>
+          <li><a href="{{ order }}">{{ text_order }}</a></li>
+          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+          <!--<li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>-->
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div>  
+	<div style="width: 100%; display: table;">
+    <div style="display: table-row">
+        <div style="width: 600px; display: table-cell;"> {{ powered }} </div>
+        <div style="display: table-cell;" align="right"> 			<ul>
+			<a title="Facebook" href="https://www.facebook.com/rombik.uz/" target="_blank">
+				<span class="fa fa-facebook icon-social" ></span> <span >&nbsp;&nbsp;</span>
+			</a>
+			<a title="Instagram" href="https://www.instagram.com/rombik_uz/" target="_blank"> 
+				<span class="fa fa-instagram icon-social"></span> <span >&nbsp;&nbsp;</span>
+			</a>
+			<a title="Telegram" href="https://t.me/rombikuz" target="_blank"> 
+				<span class="fa fa-telegram icon-social"></span><span >&nbsp;&nbsp;</span>
+			</a>
+			<a title="Youtube" href="https://www.youtube.com/channel/UCkccP3F7E3SKOfj7EuKWwJQ" target="_blank"> 
+				<span class="fa fa-youtube icon-social"></span> 
+			</a>
+			</ul> </div>
+    </div>
+</div>
+  </div>
+</footer>
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+</body></html>
